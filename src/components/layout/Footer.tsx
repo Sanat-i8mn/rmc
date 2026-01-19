@@ -53,28 +53,28 @@ const Footer = () => {
               </a>
             </div>
 
-            {/* Industry */}
+            {/* Industries */}
             <div>
-              <h3 className="font-semibold text-background mb-4">Industry</h3>
+              <h3 className="font-semibold text-background mb-4">Industries</h3>
               <ul className="space-y-3">
                 <li>
                   <Link to="/startups-enterprises" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Publishers & Societies
+                    Startups & Enterprises
                   </Link>
                 </li>
                 <li>
                   <Link to="/healthcare-life-sciences" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Universities
+                    Healthcare & Life Sciences
                   </Link>
                 </li>
                 <li>
                   <Link to="/medcom-research-agencies" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Government & Funding Organisations
+                    MedCom & Research Agencies
                   </Link>
                 </li>
                 <li>
                   <Link to="/research-for-everyone" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Corporate & Business
+                    Research for Everyone
                   </Link>
                 </li>
               </ul>
@@ -86,42 +86,32 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <Link to="/research-paper-publication" className="text-background/70 hover:text-background text-sm transition-colors">
-                    AI Solutions
+                    Research Paper Publication
                   </Link>
                 </li>
                 <li>
                   <Link to="/phd-assistance" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Paperpal
+                    Ph. D. Assistance
                   </Link>
                 </li>
                 <li>
                   <Link to="/masters-research-assistance" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Paperpal Preflight for Editorial Desk
+                    Master's Research Assistance
                   </Link>
                 </li>
                 <li>
                   <Link to="/data-analysis" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Author Services
+                    Data Analysis
                   </Link>
                 </li>
                 <li>
                   <Link to="/essay-writing" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Digital Media Solutions
+                    Essay Writing
                   </Link>
                 </li>
                 <li>
                   <Link to="/editing" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Peer Review Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Mind The Graph
-                  </Link>
-                </li>
-                <li>
-                  <Link to="#" className="text-background/70 hover:text-background text-sm transition-colors">
-                    Technical Writing Solutions
+                    Editing
                   </Link>
                 </li>
               </ul>

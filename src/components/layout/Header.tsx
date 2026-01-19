@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Menu, X, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,12 +23,28 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const location = useLocation();
+  const headerRef = useRef<HTMLElement>(null);
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIndustriesOpen(false);
+        setSolutionsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-foreground/10">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-sm border-b border-foreground/10">
       <div className="container-custom flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -153,30 +169,64 @@ const Header = () => {
           >
             <div className="container-custom py-4 space-y-4">
               <div className="space-y-2">
-                <p className="text-foreground/60 text-xs uppercase tracking-wider">Industries</p>
-                {industries.map((item) => (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    className="block py-2 text-foreground hover:text-primary transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                <button 
+                  onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                  className="flex items-center justify-between w-full py-2 text-foreground/60 text-xs uppercase tracking-wider"
+                >
+                  Industries
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileIndustriesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileIndustriesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden"
+                    >
+                      {industries.map((item) => (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          className="block py-2 pl-4 text-foreground hover:text-primary transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
               <div className="space-y-2 pt-4 border-t border-foreground/10">
-                <p className="text-foreground/60 text-xs uppercase tracking-wider">Solutions</p>
-                {solutions.map((item) => (
-                  <Link
-                    key={item.href}
-                    to={item.href}
-                    className="block py-2 text-foreground hover:text-primary transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+                <button 
+                  onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                  className="flex items-center justify-between w-full py-2 text-foreground/60 text-xs uppercase tracking-wider"
+                >
+                  Solutions
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <AnimatePresence>
+                  {mobileSolutionsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden"
+                    >
+                      {solutions.map((item) => (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          className="block py-2 pl-4 text-foreground hover:text-primary transition-colors"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
               <div className="space-y-2 pt-4 border-t border-foreground/10">
                 <Link

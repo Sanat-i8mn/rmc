@@ -11,115 +11,127 @@ const PhdAssistancePage = () => {
   const heroData = {
     badge: "Ph.D. Assistance",
     badgeIcon: <GraduationCap className="w-4 h-4" />,
-    titleWhite: "Complete Ph.D.",
-    titleRed: "Research Support",
-    subtitle: "Comprehensive assistance for your doctoral journey. From research proposal to thesis submission and defense preparation.",
-    tags: ["Research Proposal", "Literature Review", "Data Collection", "Thesis Writing", "Defense Prep", "Publications"],
-    primaryCta: "Get Started",
-    secondaryCta: "Explore Services",
+    titleWhite: "PhD End-to-End",
+    titleRed: "Research Support Solution",
+    subtitle: "Structured, Ethical, and Publication-Focused Support Throughout Your PhD Journey. A PhD is not just about writing a thesis — it is about conducting rigorous research, producing credible results, and contributing publishable knowledge to your field.",
+    tags: ["Research Planning", "Literature Review", "Data Analysis", "Publication Support", "Thesis Writing", "Viva Preparation"],
+    primaryCta: "Contact Us",
+    secondaryCta: "Learn More",
     stats: [
-      { value: "500+", label: "Ph.D. Scholars Helped" },
-      { value: "95%", label: "Success Rate" },
-      { value: "All", label: "Disciplines Covered" },
-      { value: "Expert", label: "Guidance Available" },
+      { value: "PhD", label: "Scholars Supported" },
+      { value: "Ethical", label: "Research Practices" },
+      { value: "Publication", label: "Focused" },
+      { value: "Expert", label: "Guidance" },
     ],
   };
 
   const services = [
     {
-      title: "Research Proposal Writing",
-      description: "Craft a compelling research proposal that gets approved by your university committee.",
+      title: "Research Planning & Proposal Support",
+      description: "Research topic refinement, problem statement and research gap identification, research objectives and hypotheses development, proposal structuring and academic language refinement, alignment with institutional and ethical guidelines.",
     },
     {
-      title: "Literature Review",
-      description: "Comprehensive literature review covering all relevant sources in your research domain.",
+      title: "Literature Review Development",
+      description: "Systematic or narrative literature review support, thematic synthesis of existing research, gap identification and conceptual framework development, reference management and citation consistency.",
     },
     {
-      title: "Research Methodology",
-      description: "Design robust research methodology including sampling, data collection, and analysis plans.",
+      title: "Methodology & Study Design Support",
+      description: "Quantitative, qualitative, or mixed-methods design support, questionnaire and tool design guidance, variable definition and research framework structuring, ethical research alignment and documentation support.",
     },
     {
-      title: "Data Analysis",
-      description: "Statistical analysis using SPSS, R, Python, AMOS, and other advanced tools.",
+      title: "Data Analysis & Scientific Interpretation",
+      description: "Quantitative and qualitative data analysis support, collaboration with statisticians when required, interpretation of statistical outputs, results section writing and visualization support, alignment of findings with research objectives.",
     },
     {
-      title: "Thesis Writing",
-      description: "Professional thesis writing services maintaining academic standards and originality.",
+      title: "Research Paper Publication Support",
+      description: "Manuscript writing from PhD data, abstracts, posters, and conference papers, journal selection and formatting, submission and reviewer response support.",
     },
     {
-      title: "Chapter-wise Support",
-      description: "Dedicated support for each chapter from introduction to conclusion and references.",
+      title: "Thesis Writing, Editing & Finalization",
+      description: "Chapter-wise thesis writing support, academic language refinement and coherence, formatting as per university guidelines, final proofreading and submission readiness review.",
     },
     {
-      title: "Synopsis Preparation",
-      description: "Create impactful synopsis for pre-submission and university requirements.",
-    },
-    {
-      title: "Defense Preparation",
-      description: "Comprehensive preparation for viva voce including presentation and Q&A practice.",
+      title: "Training, Guidance & Viva Preparation",
+      description: "Explanation of analysis and findings, methodology and results walkthroughs, support for viva/defense preparation, research communication confidence building.",
     },
   ];
 
   const processSteps = [
     {
       number: 1,
-      title: "Consultation",
-      description: "Discuss your research topic, objectives, and specific requirements with our experts.",
+      title: "Initial Consultation",
+      description: "Understand your PhD stage and goals through detailed discussion.",
     },
     {
       number: 2,
-      title: "Planning",
-      description: "Create a detailed timeline and roadmap for your Ph.D. journey with milestones.",
+      title: "Customized Support Plan",
+      description: "Tailored to your timeline and specific research requirements.",
     },
     {
       number: 3,
-      title: "Execution",
-      description: "Work collaboratively on research, writing, and analysis with regular updates.",
+      title: "Ongoing Research & Writing Support",
+      description: "Milestone-based support throughout your PhD journey.",
     },
     {
       number: 4,
-      title: "Completion",
-      description: "Final thesis submission with plagiarism check, formatting, and defense preparation.",
+      title: "Review & Refinement",
+      description: "Iterative improvement ensuring quality and academic standards.",
+    },
+    {
+      number: 5,
+      title: "Final Submission & Publication Support",
+      description: "Complete support for thesis submission and research publication.",
     },
   ];
 
   const benefits = [
-    "Subject matter experts with Ph.D. qualifications",
-    "Personalized one-on-one mentorship",
-    "Plagiarism-free original research guaranteed",
-    "Flexible payment plans for scholars",
-    "24/7 support throughout your Ph.D. journey",
+    "Structured and milestone-driven PhD progression",
+    "Strong alignment between thesis and publications",
+    "Clear understanding of your own research",
+    "Improved research quality and academic confidence",
+    "Ethical, transparent, and defensible doctoral work",
+    "Support for medical, life sciences, public health, AI-healthcare, diagnostics fields",
   ];
 
   const testimonials = [
-    {
-      quote: "RMC's Ph.D. assistance was instrumental in completing my doctorate. Their expert guidance made the complex journey manageable.",
-      author: "Dr. Sneha Patel",
-      role: "Ph.D. Graduate, Mumbai University",
-    },
+  {
+    quote: "The structured guidance and ethical research support helped me complete my doctoral work with clarity and confidence. Every step was transparent and well explained.",
+    author: "Dr. Emily Carter",
+    role: "PhD Researcher, Biomedical Sciences (USA)",
+  },
+  {
+    quote: "Their mentorship significantly improved my research methodology and academic writing. I successfully published my work in a peer-reviewed journal.",
+    author: "Michael Anderson",
+    role: "PhD Scholar, Computer Science (USA)",
+  },
+  {
+    quote: "The support I received for my master's thesis was exceptional. The feedback was detailed, professional, and academically sound.",
+    author: "Sarah Williams",
+    role: "MS Student, Data Analytics (USA)",
+  },
   ];
 
   return (
     <Layout>
       <IndustryHero {...heroData} />
       <IndustryServices
-        sectionLabel="What We Offer"
-        title="Ph.D. Research Services"
-        subtitle="End-to-end support for your doctoral research journey, ensuring quality and timely completion."
+        sectionLabel="Our PhD End-to-End Support Covers the Entire Lifecycle"
+        title="Comprehensive PhD Research Support"
+        subtitle="We work as research partners, helping you progress with clarity, confidence, and consistency while maintaining academic integrity, transparency, and ethical compliance."
         services={services}
       />
       <IndustryProcess
-        sectionLabel="Our Process"
-        title="Your Ph.D. Journey"
-        subtitle="A structured approach to guide you through every stage of your doctoral research."
+        sectionLabel="How the Process Works"
+        title="Your PhD Journey with Us"
+        subtitle="A milestone-driven approach ensuring structured progression from start to successful completion."
         steps={processSteps}
       />
       <IndustryWhyUs
-        sectionLabel="Why Choose Us"
-        title="Your Ph.D. Success Partner"
-        subtitle="We understand the challenges of doctoral research. Our team of Ph.D. holders provides expert guidance to help you achieve your academic goals with confidence."
+        sectionLabel="Key Outcomes You Can Expect"
+        title="Support Your PhD — Without Compromising Integrity"
+        subtitle="All services are provided as research assistance, writing support, and academic guidance. We strictly adhere to university regulations, publication ethics, and academic integrity standards. Final responsibility and authorship remain with the PhD scholar."
         benefits={benefits}
-        ctaText="Ready to start your Ph.D. journey?"
+        ctaText="If you are seeking structured, ethical, and expert PhD research support, we are here to help."
       />
       <IndustryTestimonials
         sectionLabel="Testimonials"
@@ -127,8 +139,8 @@ const PhdAssistancePage = () => {
         testimonials={testimonials}
       />
       <IndustryCTA
-        title="Need Ph.D. Assistance?"
-        subtitle="Let's discuss how we can support your doctoral research and help you achieve your academic dreams."
+        title="Ready to Begin Your PhD Journey?"
+        subtitle="Contact us to discuss your PhD requirements and discover how we can support your research with integrity and expertise."
       />
     </Layout>
   );

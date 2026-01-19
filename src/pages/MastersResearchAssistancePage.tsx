@@ -12,114 +12,126 @@ const MastersResearchAssistancePage = () => {
     badge: "Master's Research Assistance",
     badgeIcon: <BookOpen className="w-4 h-4" />,
     titleWhite: "Master's Thesis",
-    titleRed: "& Dissertation Help",
-    subtitle: "Expert assistance for your master's research project. From topic selection to final submission with quality assurance.",
-    tags: ["Thesis Writing", "Dissertation", "Research Design", "Data Analysis", "Literature Review", "Formatting"],
-    primaryCta: "Get Started",
-    secondaryCta: "Explore Services",
+    titleRed: "End-to-End Research Support Solution",
+    subtitle: "Complete, Structured, and Ethical Support for Your Master's Thesis. A Master's thesis is a critical academic milestone that requires clear research direction, sound methodology, accurate analysis, and strong academic writing.",
+    tags: ["Topic Selection", "Literature Review", "Data Analysis", "Thesis Writing", "Formatting", "Defense Support"],
+    primaryCta: "Contact Us",
+    secondaryCta: "Learn More",
     stats: [
-      { value: "2000+", label: "Students Helped" },
-      { value: "98%", label: "Success Rate" },
-      { value: "50+", label: "Subjects Covered" },
-      { value: "Quick", label: "Delivery" },
+      { value: "Master's", label: "Students Supported" },
+      { value: "Ethical", label: "Research Practices" },
+      { value: "Structured", label: "Guidance" },
+      { value: "Complete", label: "Support" },
     ],
   };
 
   const services = [
     {
-      title: "Topic Selection",
-      description: "Help in selecting a relevant and feasible research topic aligned with your interests.",
+      title: "Topic Selection & Research Planning",
+      description: "Topic finalization aligned with your program, research problem definition, objective and research question development, feasibility and scope assessment.",
     },
     {
-      title: "Proposal Writing",
-      description: "Craft a strong research proposal that gets approved by your academic committee.",
+      title: "Literature Review Development",
+      description: "Literature search strategy, thematic organization of studies, identification of research gaps, proper academic referencing.",
     },
     {
-      title: "Literature Review",
-      description: "Comprehensive review of existing literature with proper synthesis and critical analysis.",
+      title: "Methodology & Study Design Support",
+      description: "Quantitative, qualitative, or mixed-methods guidance, questionnaire and data collection tool design, sampling and variable definition, research framework development.",
     },
     {
-      title: "Research Methodology",
-      description: "Design appropriate research methods including qualitative and quantitative approaches.",
+      title: "Data Collection & Analysis Support",
+      description: "Data collection guidance and validation, quantitative and qualitative data analysis support, use of tools such as SPSS, Python, NVivo, R, Excel, interpretation of statistical outputs, tables, figures, and results writing support.",
     },
     {
-      title: "Data Collection",
-      description: "Assistance in primary and secondary data collection through surveys, interviews, and more.",
+      title: "Thesis Writing & Chapter Development",
+      description: "Chapter-wise writing support, academic language refinement, results, discussion, and conclusion development, alignment with university guidelines.",
     },
     {
-      title: "Statistical Analysis",
-      description: "Expert data analysis using SPSS, Excel, R, and other statistical software.",
+      title: "Editing, Formatting & Final Review",
+      description: "Proofreading and consistency checks, formatting as per university requirements, reference and citation verification, final submission readiness review.",
     },
     {
-      title: "Thesis Writing",
-      description: "Professional writing services for all chapters maintaining academic standards.",
-    },
-    {
-      title: "Proofreading & Formatting",
-      description: "Final editing, proofreading, and formatting as per university guidelines.",
+      title: "Training & Presentation Support",
+      description: "Explanation of methodology and results, support for thesis defense or presentation, confidence-building guidance.",
     },
   ];
 
   const processSteps = [
     {
       number: 1,
-      title: "Requirement Analysis",
-      description: "Understand your research requirements, university guidelines, and deadlines.",
+      title: "Initial Consultation",
+      description: "Understand your thesis requirements and academic goals.",
     },
     {
       number: 2,
-      title: "Research Planning",
-      description: "Create a detailed research plan with timeline and deliverables.",
+      title: "Customized Support Plan",
+      description: "Aligned with your timeline and university guidelines.",
     },
     {
       number: 3,
-      title: "Writing & Analysis",
-      description: "Execute research, analyze data, and write your thesis with regular feedback.",
+      title: "Research & Writing Support",
+      description: "Milestone-based support throughout your thesis journey.",
     },
     {
       number: 4,
-      title: "Final Submission",
-      description: "Deliver polished thesis with plagiarism report and formatting check.",
+      title: "Review & Refinement",
+      description: "Iterative improvement ensuring academic quality.",
+    },
+    {
+      number: 5,
+      title: "Final Submission Support",
+      description: "Complete preparation for successful thesis submission.",
     },
   ];
 
   const benefits = [
-    "Experienced researchers across all disciplines",
-    "Affordable pricing for master's students",
-    "Original content with plagiarism-free guarantee",
-    "Unlimited revisions until satisfaction",
-    "On-time delivery with quality assurance",
+    "A structured, well-written Master's thesis",
+    "Clear understanding of your research",
+    "Accurate data interpretation",
+    "Academic and ethical compliance",
+    "Increased confidence during evaluation",
+    "Support for medical, biomedical, life sciences, public health, AI, and healthcare fields",
   ];
 
   const testimonials = [
     {
-      quote: "RMC made my master's thesis journey smooth and stress-free. Their support was exceptional from start to finish.",
-      author: "Rahul Sharma",
-      role: "MBA Graduate, Symbiosis University",
-    },
+    quote: "The support I received for my master's thesis was exceptional. The feedback was detailed, professional, and academically sound.",
+    author: "Sarah Williams",
+    role: "MS Student, Data Analytics (USA)",
+  },
+  {
+    quote: "Ethical, reliable, and highly professional research assistance. The team helped me refine my proposal and analyze complex datasets effectively.",
+    author: "Daniel Thompson",
+    role: "Research Analyst, Corporate Sector (USA)",
+  },
+  {
+    quote: "From proposal development to final defense preparation, the guidance was structured and easy to follow. It made my doctoral journey much smoother.",
+    author: "Dr. Jennifer Lee",
+    role: "PhD Scholar, Business Administration (USA)",
+  },
   ];
 
   return (
     <Layout>
       <IndustryHero {...heroData} />
       <IndustryServices
-        sectionLabel="What We Offer"
-        title="Master's Research Services"
-        subtitle="Complete research assistance to help you excel in your master's program and achieve academic success."
+        sectionLabel="Our End-to-End Master's Thesis Support Covers Every Stage"
+        title="Comprehensive Master's Research Support"
+        subtitle="We provide guided academic support, ensuring you understand every stage of your research while maintaining academic integrity and ethical standards."
         services={services}
       />
       <IndustryProcess
-        sectionLabel="Our Process"
-        title="How We Help"
-        subtitle="A systematic approach to ensure your master's research is completed with excellence."
+        sectionLabel="How the Process Works"
+        title="Your Master's Thesis Journey"
+        subtitle="A systematic and milestone-driven approach to ensure successful thesis completion."
         steps={processSteps}
       />
       <IndustryWhyUs
-        sectionLabel="Why Choose Us"
-        title="Your Academic Success Partner"
-        subtitle="We specialize in helping master's students complete their research projects successfully. Our team provides personalized support tailored to your specific needs."
+        sectionLabel="Key Outcomes You Can Expect"
+        title="Complete Your Master's Thesis with Confidence"
+        subtitle="All services are provided as academic guidance, research assistance, and writing support. We strictly follow university policies, ethical research practices, and academic integrity standards. Final responsibility and authorship remain with the student."
         benefits={benefits}
-        ctaText="Ready to excel in your master's research?"
+        ctaText="If you are looking for structured, ethical, and expert-guided Master's thesis support, we are here to help."
       />
       <IndustryTestimonials
         sectionLabel="Testimonials"
@@ -127,8 +139,8 @@ const MastersResearchAssistancePage = () => {
         testimonials={testimonials}
       />
       <IndustryCTA
-        title="Need Master's Research Help?"
-        subtitle="Connect with our experts and get the support you need to complete your master's thesis successfully."
+        title="Ready to Start Your Master's Thesis?"
+        subtitle="Contact us to discuss your thesis requirements and discover how we can guide you to successful completion."
       />
     </Layout>
   );
